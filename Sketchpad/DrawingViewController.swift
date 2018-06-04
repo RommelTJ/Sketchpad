@@ -89,6 +89,7 @@ class DrawingViewController: UIViewController, ChromaColorPickerDelegate {
     // MARK: ChromaColorPickerDelegate
     
     func colorPickerDidChooseColor(_ colorPicker: ChromaColorPicker, color: UIColor) {
-        print("color chosen")
+        currentColor = color.cgColor
+        colorPicker.isHidden = true
     }
 }
