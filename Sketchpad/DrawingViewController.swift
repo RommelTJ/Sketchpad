@@ -11,13 +11,16 @@ import UIKit
 class DrawingViewController: UIViewController {
     
     @IBOutlet weak var drawImageView: UIImageView!
+    private var lastPoint = CGPoint(x: 0, y: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+        if let beginPoint = touches.first?.location(in: drawImageView) {
+            lastPoint = beginPoint
+        }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -25,7 +28,10 @@ class DrawingViewController: UIViewController {
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+        if let movedPoint = touches.first?.location(in: drawImageView) {
+            drawBetweenTwoPoints(p1: lastPoint, p2: movedPoint)
+            lastPoint = movedPoint
+        }
     }
 
     func drawBetweenTwoPoints(p1: CGPoint, p2: CGPoint) {
