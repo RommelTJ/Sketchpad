@@ -91,19 +91,29 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
                                 <color key="backgroundColor" red="0.34901960780000002" green="0.34901960780000002" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dxB-bC-xnm">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zH8-f0-bJ2" firstAttribute="top" secondItem="vZh-pJ-NyF" secondAttribute="top" id="0hU-jv-499"/>
                             <constraint firstItem="zH8-f0-bJ2" firstAttribute="leading" secondItem="vZh-pJ-NyF" secondAttribute="leading" id="8SU-J3-1Ur"/>
                             <constraint firstItem="zH8-f0-bJ2" firstAttribute="trailing" secondItem="vZh-pJ-NyF" secondAttribute="trailing" id="D2D-ic-Tul"/>
+                            <constraint firstItem="vZh-pJ-NyF" firstAttribute="bottom" secondItem="dxB-bC-xnm" secondAttribute="bottom" id="G4V-ZI-th3"/>
                             <constraint firstItem="vZh-pJ-NyF" firstAttribute="trailing" secondItem="L5C-Zf-CFb" secondAttribute="trailing" id="Ly5-ML-tsE"/>
                             <constraint firstItem="L5C-Zf-CFb" firstAttribute="leading" secondItem="5e7-d3-7PJ" secondAttribute="leading" id="NrK-Mt-GRv"/>
+                            <constraint firstItem="vZh-pJ-NyF" firstAttribute="trailing" secondItem="dxB-bC-xnm" secondAttribute="trailing" id="ZNO-fy-ekC"/>
                             <constraint firstItem="L5C-Zf-CFb" firstAttribute="bottom" secondItem="vZh-pJ-NyF" secondAttribute="top" id="b0D-zm-y8I"/>
+                            <constraint firstItem="dxB-bC-xnm" firstAttribute="top" secondItem="zH8-f0-bJ2" secondAttribute="bottom" id="fdL-Xm-jbE"/>
+                            <constraint firstItem="dxB-bC-xnm" firstAttribute="leading" secondItem="vZh-pJ-NyF" secondAttribute="leading" id="mAO-Xt-CHU"/>
                             <constraint firstItem="L5C-Zf-CFb" firstAttribute="top" secondItem="5e7-d3-7PJ" secondAttribute="top" id="t2f-3w-xYf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vZh-pJ-NyF"/>
                     </view>
+                    <connections>
+                        <outlet property="drawImageView" destination="dxB-bC-xnm" id="S9g-Yh-JKK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pys-iN-4TP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
