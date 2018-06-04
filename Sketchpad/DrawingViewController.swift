@@ -9,7 +9,7 @@
 import UIKit
 import ChromaColorPicker
 
-class DrawingViewController: UIViewController {
+class DrawingViewController: UIViewController, ChromaColorPickerDelegate {
     
     @IBOutlet weak var drawImageView: UIImageView!
     private var lastPoint = CGPoint(x: 0, y: 0)
@@ -19,6 +19,16 @@ class DrawingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Setting up the color picker
+        colorPicker = ChromaColorPicker(frame: CGRect(x: view.frame.size.width/2 - 100, y: view.frame.size.height/2 - 100, width: 200, height: 200))
+        if let picker = colorPicker {
+            picker.delegate = self
+            picker.padding = 5
+            picker.stroke = 3
+            picker.hexLabel.isHidden = true
+            view.addSubview(picker)
+        }
     }
     
     @IBAction func colorTapped(_ sender: Any) {
@@ -74,5 +84,11 @@ class DrawingViewController: UIViewController {
             drawImageView.image = UIGraphicsGetImageFromCurrentImageContext()
         }
         UIGraphicsEndImageContext()
+    }
+    
+    // MARK: ChromaColorPickerDelegate
+    
+    func colorPickerDidChooseColor(_ colorPicker: ChromaColorPicker, color: UIColor) {
+        print("color chosen")
     }
 }
