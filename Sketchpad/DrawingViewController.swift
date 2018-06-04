@@ -28,4 +28,18 @@ class DrawingViewController: UIViewController {
         
     }
 
+    func drawBetweenTwoPoints(p1: CGPoint, p2: CGPoint) {
+        UIGraphicsBeginImageContext(drawImageView.frame.size)
+        drawImageView.image?.draw(in: CGRect(x: 0, y: 0, width: drawImageView.frame.size.width, height: drawImageView.frame.size.height))
+        if let context = UIGraphicsGetCurrentContext() {
+            context.move(to: p1)
+            context.addLine(to: p2)
+            context.setLineWidth(10)
+            context.setLineCap(.round)
+            context.setStrokeColor(UIColor.red.cgColor)
+            context.strokePath()
+            drawImageView.image = UIGraphicsGetImageFromCurrentImageContext()
+        }
+        UIGraphicsEndImageContext()
+    }
 }
