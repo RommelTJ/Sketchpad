@@ -33,6 +33,8 @@ class DrawingViewController: UIViewController, ChromaColorPickerDelegate {
     }
     
     @IBAction func colorTapped(_ sender: Any) {
+        colorPicker?.adjustToColor(UIColor(cgColor: currentColor))
+        colorPicker?.isHidden = false
     }
     
     @IBAction func sizeTapped(_ sender: Any) {
