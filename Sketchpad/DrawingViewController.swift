@@ -16,9 +16,16 @@ class DrawingViewController: UIViewController, ChromaColorPickerDelegate {
     private var currentColor = UIColor.blue.cgColor
     private var brushSize: Float = 10.0
     private var colorPicker: ChromaColorPicker?
+    private var greyedOut = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Greyed out view
+        greyedOut.frame = view.frame
+        greyedOut.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+        view.addSubview(greyedOut)
+        greyedOut.isHidden = true
         
         // Setting up the color picker
         colorPicker = ChromaColorPicker(frame: CGRect(x: view.frame.size.width/2 - 100, y: view.frame.size.height/2 - 100, width: 200, height: 200))
@@ -35,6 +42,7 @@ class DrawingViewController: UIViewController, ChromaColorPickerDelegate {
     @IBAction func colorTapped(_ sender: Any) {
         colorPicker?.adjustToColor(UIColor(cgColor: currentColor))
         colorPicker?.isHidden = false
+        greyedOut.isHidden = false
     }
     
     @IBAction func sizeTapped(_ sender: Any) {
@@ -94,5 +102,6 @@ class DrawingViewController: UIViewController, ChromaColorPickerDelegate {
     func colorPickerDidChooseColor(_ colorPicker: ChromaColorPicker, color: UIColor) {
         currentColor = color.cgColor
         colorPicker.isHidden = true
+        greyedOut.isHidden = true
     }
 }
