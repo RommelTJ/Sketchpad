@@ -17,6 +17,15 @@ class DrawingViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func colorTapped(_ sender: Any) {
+    }
+    
+    @IBAction func sizeTapped(_ sender: Any) {
+    }
+    
+    @IBAction func eraseTapped(_ sender: Any) {
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let beginPoint = touches.first?.location(in: drawImageView) {
             lastPoint = beginPoint

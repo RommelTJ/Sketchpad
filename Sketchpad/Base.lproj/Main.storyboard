@@ -103,6 +103,9 @@
                                             <constraint firstAttribute="width" constant="80" id="ban-Ec-Mf8"/>
                                         </constraints>
                                         <state key="normal" image="color"/>
+                                        <connections>
+                                            <action selector="colorTapped:" destination="KoE-us-a6f" eventType="touchUpInside" id="OWg-7z-97C"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giK-UA-PnY">
                                         <rect key="frame" x="147.5" y="0.0" width="80" height="80"/>
@@ -110,6 +113,9 @@
                                             <constraint firstAttribute="width" constant="80" id="FLo-8A-MA6"/>
                                         </constraints>
                                         <state key="normal" image="size"/>
+                                        <connections>
+                                            <action selector="sizeTapped:" destination="KoE-us-a6f" eventType="touchUpInside" id="40v-Bh-kd1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Co-hI-Tbx">
                                         <rect key="frame" x="295" y="0.0" width="80" height="80"/>
@@ -117,6 +123,9 @@
                                             <constraint firstAttribute="width" constant="80" id="PTX-ZK-59U"/>
                                         </constraints>
                                         <state key="normal" image="erase"/>
+                                        <connections>
+                                            <action selector="eraseTapped:" destination="KoE-us-a6f" eventType="touchUpInside" id="Bfz-c3-Xzn"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
