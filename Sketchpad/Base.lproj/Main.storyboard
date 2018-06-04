@@ -94,6 +94,44 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dxB-bC-xnm">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="6Ar-XF-W5I">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GkA-Ee-XlU">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="ban-Ec-Mf8"/>
+                                        </constraints>
+                                        <state key="normal" image="color"/>
+                                        <connections>
+                                            <action selector="colorTapped:" destination="KoE-us-a6f" eventType="touchUpInside" id="OWg-7z-97C"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giK-UA-PnY">
+                                        <rect key="frame" x="147.5" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="FLo-8A-MA6"/>
+                                        </constraints>
+                                        <state key="normal" image="size"/>
+                                        <connections>
+                                            <action selector="sizeTapped:" destination="KoE-us-a6f" eventType="touchUpInside" id="40v-Bh-kd1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Co-hI-Tbx">
+                                        <rect key="frame" x="295" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="PTX-ZK-59U"/>
+                                        </constraints>
+                                        <state key="normal" image="erase"/>
+                                        <connections>
+                                            <action selector="eraseTapped:" destination="KoE-us-a6f" eventType="touchUpInside" id="Bfz-c3-Xzn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="EJ2-b2-lL8"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -102,12 +140,15 @@
                             <constraint firstItem="zH8-f0-bJ2" firstAttribute="trailing" secondItem="vZh-pJ-NyF" secondAttribute="trailing" id="D2D-ic-Tul"/>
                             <constraint firstItem="vZh-pJ-NyF" firstAttribute="bottom" secondItem="dxB-bC-xnm" secondAttribute="bottom" id="G4V-ZI-th3"/>
                             <constraint firstItem="vZh-pJ-NyF" firstAttribute="trailing" secondItem="L5C-Zf-CFb" secondAttribute="trailing" id="Ly5-ML-tsE"/>
+                            <constraint firstItem="6Ar-XF-W5I" firstAttribute="leading" secondItem="vZh-pJ-NyF" secondAttribute="leading" id="McM-OI-S7o"/>
                             <constraint firstItem="L5C-Zf-CFb" firstAttribute="leading" secondItem="5e7-d3-7PJ" secondAttribute="leading" id="NrK-Mt-GRv"/>
                             <constraint firstItem="vZh-pJ-NyF" firstAttribute="trailing" secondItem="dxB-bC-xnm" secondAttribute="trailing" id="ZNO-fy-ekC"/>
                             <constraint firstItem="L5C-Zf-CFb" firstAttribute="bottom" secondItem="vZh-pJ-NyF" secondAttribute="top" id="b0D-zm-y8I"/>
                             <constraint firstItem="dxB-bC-xnm" firstAttribute="top" secondItem="zH8-f0-bJ2" secondAttribute="bottom" id="fdL-Xm-jbE"/>
+                            <constraint firstItem="vZh-pJ-NyF" firstAttribute="trailing" secondItem="6Ar-XF-W5I" secondAttribute="trailing" id="hKu-sU-REY"/>
                             <constraint firstItem="dxB-bC-xnm" firstAttribute="leading" secondItem="vZh-pJ-NyF" secondAttribute="leading" id="mAO-Xt-CHU"/>
                             <constraint firstItem="L5C-Zf-CFb" firstAttribute="top" secondItem="5e7-d3-7PJ" secondAttribute="top" id="t2f-3w-xYf"/>
+                            <constraint firstItem="6Ar-XF-W5I" firstAttribute="bottom" secondItem="vZh-pJ-NyF" secondAttribute="bottom" id="uLM-Vk-f8H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vZh-pJ-NyF"/>
                     </view>
@@ -138,4 +179,9 @@
             <point key="canvasLocation" x="-82.400000000000006" y="-18.440779610194905"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="color" width="256" height="256"/>
+        <image name="erase" width="256" height="256"/>
+        <image name="size" width="256" height="256"/>
+    </resources>
 </document>
