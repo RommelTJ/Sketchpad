@@ -24,7 +24,9 @@ class DrawingViewController: UIViewController {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+        if let endPoint = touches.first?.location(in: drawImageView) {
+            drawBetweenTwoPoints(p1: lastPoint, p2: endPoint)
+        }
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
