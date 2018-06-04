@@ -13,6 +13,7 @@ class DrawingViewController: UIViewController {
     @IBOutlet weak var drawImageView: UIImageView!
     private var lastPoint = CGPoint(x: 0, y: 0)
     private var currentColor = UIColor.blue.cgColor
+    private var brushSize: Float = 10.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,17 @@ class DrawingViewController: UIViewController {
     }
     
     @IBAction func sizeTapped(_ sender: Any) {
+        let alertController = UIAlertController(title: "Brush Size", message: "\n\n\n\n\n\n\n", preferredStyle: .alert)
+        let slider = UISlider(frame: CGRect(x: 10, y: 50, width: 250, height: 80))
+        slider.minimumValue = 1
+        slider.maximumValue = 100
+        slider.value = brushSize
+        alertController.view.addSubview(slider)
+        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+            self.brushSize = slider.value
+        }
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func eraseTapped(_ sender: Any) {
@@ -53,7 +65,7 @@ class DrawingViewController: UIViewController {
         if let context = UIGraphicsGetCurrentContext() {
             context.move(to: p1)
             context.addLine(to: p2)
-            context.setLineWidth(10)
+            context.setLineWidth(CGFloat(brushSize))
             context.setLineCap(.round)
             context.setStrokeColor(currentColor)
             context.strokePath()
