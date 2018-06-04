@@ -12,6 +12,7 @@ class DrawingViewController: UIViewController {
     
     @IBOutlet weak var drawImageView: UIImageView!
     private var lastPoint = CGPoint(x: 0, y: 0)
+    private var currentColor = UIColor.blue.cgColor
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class DrawingViewController: UIViewController {
     }
     
     @IBAction func eraseTapped(_ sender: Any) {
+        currentColor = UIColor.white.cgColor
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -53,7 +55,7 @@ class DrawingViewController: UIViewController {
             context.addLine(to: p2)
             context.setLineWidth(10)
             context.setLineCap(.round)
-            context.setStrokeColor(UIColor.red.cgColor)
+            context.setStrokeColor(currentColor)
             context.strokePath()
             drawImageView.image = UIGraphicsGetImageFromCurrentImageContext()
         }
