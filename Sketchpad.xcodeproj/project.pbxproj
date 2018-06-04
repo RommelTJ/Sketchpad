@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60C50839215C56CDECA4200D /* Pods_Sketchpad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC5DB2E6F39C43C459F871C1 /* Pods_Sketchpad.framework */; };
 		B02324D620C35C0300DA454E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02324D520C35C0300DA454E /* AppDelegate.swift */; };
 		B02324DB20C35C0300DA454E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B02324D920C35C0300DA454E /* Main.storyboard */; };
 		B02324DE20C35C0300DA454E /* Sketchpad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B02324DC20C35C0300DA454E /* Sketchpad.xcdatamodeld */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1402C09743FB6A755A6FFE43 /* Pods-Sketchpad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sketchpad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sketchpad/Pods-Sketchpad.debug.xcconfig"; sourceTree = "<group>"; };
 		B02324D220C35C0300DA454E /* Sketchpad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sketchpad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B02324D520C35C0300DA454E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B02324DA20C35C0300DA454E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		B02324E220C35C0300DA454E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B02324E420C35C0300DA454E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0B0711420C4F2ED005E41DC /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
+		D92D22687E19229E234A8FEC /* Pods-Sketchpad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sketchpad.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sketchpad/Pods-Sketchpad.release.xcconfig"; sourceTree = "<group>"; };
+		DC5DB2E6F39C43C459F871C1 /* Pods_Sketchpad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sketchpad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60C50839215C56CDECA4200D /* Pods_Sketchpad.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E37A318EE43D0A4823D86BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC5DB2E6F39C43C459F871C1 /* Pods_Sketchpad.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80031F65E31DB3594F9BEE03 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1402C09743FB6A755A6FFE43 /* Pods-Sketchpad.debug.xcconfig */,
+				D92D22687E19229E234A8FEC /* Pods-Sketchpad.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B02324C920C35C0300DA454E = {
 			isa = PBXGroup;
 			children = (
 				B02324D420C35C0300DA454E /* Sketchpad */,
 				B02324D320C35C0300DA454E /* Products */,
+				80031F65E31DB3594F9BEE03 /* Pods */,
+				7E37A318EE43D0A4823D86BC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B02324E720C35C0300DA454E /* Build configuration list for PBXNativeTarget "Sketchpad" */;
 			buildPhases = (
+				BDC6D857D8085B81E8686F3A /* [CP] Check Pods Manifest.lock */,
 				B02324CE20C35C0300DA454E /* Sources */,
 				B02324CF20C35C0300DA454E /* Frameworks */,
 				B02324D020C35C0300DA454E /* Resources */,
+				65457AB305EC86AD998ECF55 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		65457AB305EC86AD998ECF55 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Sketchpad/Pods-Sketchpad-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ChromaColorPicker/ChromaColorPicker.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChromaColorPicker.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sketchpad/Pods-Sketchpad-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDC6D857D8085B81E8686F3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sketchpad-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B02324CE20C35C0300DA454E /* Sources */ = {
@@ -282,6 +347,7 @@
 		};
 		B02324E820C35C0300DA454E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1402C09743FB6A755A6FFE43 /* Pods-Sketchpad.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +366,7 @@
 		};
 		B02324E920C35C0300DA454E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D92D22687E19229E234A8FEC /* Pods-Sketchpad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
