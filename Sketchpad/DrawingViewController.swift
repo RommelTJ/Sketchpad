@@ -29,6 +29,7 @@ class DrawingViewController: UIViewController, ChromaColorPickerDelegate {
             picker.hexLabel.isHidden = true
             view.addSubview(picker)
         }
+        colorPicker?.isHidden = true
     }
     
     @IBAction func colorTapped(_ sender: Any) {
