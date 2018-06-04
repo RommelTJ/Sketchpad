@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="857" y="714"/>
         </scene>
-        <!--View Controller-->
+        <!--Drawing View Controller-->
         <scene sceneID="sYH-rj-yg1">
             <objects>
-                <viewController id="KoE-us-a6f" sceneMemberID="viewController">
+                <viewController id="KoE-us-a6f" customClass="DrawingViewController" customModule="Sketchpad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5e7-d3-7PJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
