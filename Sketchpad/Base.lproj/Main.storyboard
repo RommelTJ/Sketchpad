@@ -94,6 +94,26 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dxB-bC-xnm">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Ar-XF-W5I">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GkA-Ee-XlU">
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="80"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="giK-UA-PnY">
+                                        <rect key="frame" x="46" y="0.0" width="46" height="80"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Co-hI-Tbx">
+                                        <rect key="frame" x="92" y="0.0" width="283" height="80"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="EJ2-b2-lL8"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -102,12 +122,15 @@
                             <constraint firstItem="zH8-f0-bJ2" firstAttribute="trailing" secondItem="vZh-pJ-NyF" secondAttribute="trailing" id="D2D-ic-Tul"/>
                             <constraint firstItem="vZh-pJ-NyF" firstAttribute="bottom" secondItem="dxB-bC-xnm" secondAttribute="bottom" id="G4V-ZI-th3"/>
                             <constraint firstItem="vZh-pJ-NyF" firstAttribute="trailing" secondItem="L5C-Zf-CFb" secondAttribute="trailing" id="Ly5-ML-tsE"/>
+                            <constraint firstItem="6Ar-XF-W5I" firstAttribute="leading" secondItem="vZh-pJ-NyF" secondAttribute="leading" id="McM-OI-S7o"/>
                             <constraint firstItem="L5C-Zf-CFb" firstAttribute="leading" secondItem="5e7-d3-7PJ" secondAttribute="leading" id="NrK-Mt-GRv"/>
                             <constraint firstItem="vZh-pJ-NyF" firstAttribute="trailing" secondItem="dxB-bC-xnm" secondAttribute="trailing" id="ZNO-fy-ekC"/>
                             <constraint firstItem="L5C-Zf-CFb" firstAttribute="bottom" secondItem="vZh-pJ-NyF" secondAttribute="top" id="b0D-zm-y8I"/>
                             <constraint firstItem="dxB-bC-xnm" firstAttribute="top" secondItem="zH8-f0-bJ2" secondAttribute="bottom" id="fdL-Xm-jbE"/>
+                            <constraint firstItem="vZh-pJ-NyF" firstAttribute="trailing" secondItem="6Ar-XF-W5I" secondAttribute="trailing" id="hKu-sU-REY"/>
                             <constraint firstItem="dxB-bC-xnm" firstAttribute="leading" secondItem="vZh-pJ-NyF" secondAttribute="leading" id="mAO-Xt-CHU"/>
                             <constraint firstItem="L5C-Zf-CFb" firstAttribute="top" secondItem="5e7-d3-7PJ" secondAttribute="top" id="t2f-3w-xYf"/>
+                            <constraint firstItem="6Ar-XF-W5I" firstAttribute="bottom" secondItem="vZh-pJ-NyF" secondAttribute="bottom" id="uLM-Vk-f8H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vZh-pJ-NyF"/>
                     </view>
