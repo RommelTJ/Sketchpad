@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ChromaColorPicker
 
 class DrawingViewController: UIViewController {
     
@@ -14,6 +15,7 @@ class DrawingViewController: UIViewController {
     private var lastPoint = CGPoint(x: 0, y: 0)
     private var currentColor = UIColor.blue.cgColor
     private var brushSize: Float = 10.0
+    private var colorPicker: ChromaColorPicker?
     
     override func viewDidLoad() {
         super.viewDidLoad()
