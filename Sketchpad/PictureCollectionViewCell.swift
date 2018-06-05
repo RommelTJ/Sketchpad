@@ -9,5 +9,6 @@
 import UIKit
 
 class PictureCollectionViewCell: UICollectionViewCell {
-    
+    @IBOutlet weak var pictureLabel: UILabel!
+    @IBOutlet weak var pictureImageView: UIImageView!
 }
