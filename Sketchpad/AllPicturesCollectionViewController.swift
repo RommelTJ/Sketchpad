@@ -48,8 +48,15 @@ class AllPicturesCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        return cell
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? PictureCollectionViewCell {
+            let picture = pictures[indexPath.row]
+            cell.pictureLabel.text = picture.name
+            if let imageData = picture.image {
+                cell.pictureImageView.image = UIImage(data: imageData)
+            }
+            return cell
+        }
+        return UICollectionViewCell()
     }
 
 }
