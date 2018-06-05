@@ -84,7 +84,18 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Title" id="XYb-IG-LTl"/>
+                                    <navigationItem title="New Picture" id="XYb-IG-LTl">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="4dn-Wc-c2Q">
+                                            <connections>
+                                                <action selector="saveTapped:" destination="KoE-us-a6f" id="dgQ-te-eLJ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="aUb-WK-4v3">
+                                            <connections>
+                                                <action selector="deleteTapped:" destination="KoE-us-a6f" id="OYd-e6-qiJ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5C-Zf-CFb">
@@ -153,6 +164,7 @@
                         <viewLayoutGuide key="safeArea" id="vZh-pJ-NyF"/>
                     </view>
                     <connections>
+                        <outlet property="controlStackView" destination="6Ar-XF-W5I" id="JHS-MN-SSU"/>
                         <outlet property="drawImageView" destination="dxB-bC-xnm" id="S9g-Yh-JKK"/>
                     </connections>
                 </viewController>
