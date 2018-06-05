@@ -45,6 +45,19 @@ class DrawingViewController: UIViewController, ChromaColorPickerDelegate {
     }
     
     @IBAction func saveTapped(_ sender: Any) {
+        let alertController = UIAlertController(title: "Name your picture", message: nil, preferredStyle: .alert)
+        alertController.addTextField { (textField) in
+            textField.placeholder = "My Masterpiece"
+        }
+        let saveAction = UIAlertAction(title: "Save", style: .default) { (action) in
+            // TODO.
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive) { (action) in
+            // TODO.
+        }
+        alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func colorTapped(_ sender: Any) {
