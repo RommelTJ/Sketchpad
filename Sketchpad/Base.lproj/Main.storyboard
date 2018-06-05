@@ -84,7 +84,10 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Title" id="XYb-IG-LTl"/>
+                                    <navigationItem title="Title" id="XYb-IG-LTl">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="4dn-Wc-c2Q"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="aUb-WK-4v3"/>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L5C-Zf-CFb">
