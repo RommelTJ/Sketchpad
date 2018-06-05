@@ -73,12 +73,14 @@ class DrawingViewController: UIViewController, ChromaColorPickerDelegate {
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        controlStackView.isHidden = true
         if let beginPoint = touches.first?.location(in: drawImageView) {
             lastPoint = beginPoint
         }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        controlStackView.isHidden = false
         if let endPoint = touches.first?.location(in: drawImageView) {
             drawBetweenTwoPoints(p1: lastPoint, p2: endPoint)
         }
