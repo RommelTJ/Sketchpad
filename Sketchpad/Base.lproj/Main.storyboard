@@ -1,37 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1ND-Rx-Jhv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1ND-Rx-Jhv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Collection View Controller-->
+        <!--All Pictures Collection View Controller-->
         <scene sceneID="KjB-65-U3s">
             <objects>
-                <collectionViewController id="6oE-cf-UC9" sceneMemberID="viewController">
+                <collectionViewController id="6oE-cf-UC9" customClass="AllPicturesCollectionViewController" customModule="Sketchpad" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Duo-q7-Ydr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nwq-xR-TRJ">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="100" height="120"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="Wbq-9F-itE">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pictureCollectionCell" id="Wbq-9F-itE" customClass="PictureCollectionViewCell" customModule="Sketchpad" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEN-0t-XAf">
+                                            <rect key="frame" x="0.0" y="100" width="100" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="MKw-4M-tUn"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ux8-gH-tFX">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        </imageView>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="Ux8-gH-tFX" firstAttribute="leading" secondItem="Wbq-9F-itE" secondAttribute="leading" id="3U0-eH-6Xf"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ux8-gH-tFX" secondAttribute="trailing" id="UDe-hc-ebx"/>
+                                    <constraint firstItem="tEN-0t-XAf" firstAttribute="leading" secondItem="Wbq-9F-itE" secondAttribute="leading" id="V3e-Do-QX4"/>
+                                    <constraint firstItem="Ux8-gH-tFX" firstAttribute="top" secondItem="Wbq-9F-itE" secondAttribute="top" id="byn-nb-1GC"/>
+                                    <constraint firstItem="tEN-0t-XAf" firstAttribute="top" secondItem="Ux8-gH-tFX" secondAttribute="bottom" id="dUq-4x-tZD"/>
+                                    <constraint firstAttribute="bottom" secondItem="tEN-0t-XAf" secondAttribute="bottom" id="gPU-ye-bqt"/>
+                                    <constraint firstAttribute="trailing" secondItem="tEN-0t-XAf" secondAttribute="trailing" id="nge-Fm-QDb"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="pictureImageView" destination="Ux8-gH-tFX" id="z4u-UQ-MAq"/>
+                                    <outlet property="pictureLabel" destination="tEN-0t-XAf" id="LTz-8z-aqk"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

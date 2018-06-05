@@ -13,6 +13,8 @@
 		B02324DE20C35C0300DA454E /* Sketchpad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B02324DC20C35C0300DA454E /* Sketchpad.xcdatamodeld */; };
 		B02324E020C35C0300DA454E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B02324DF20C35C0300DA454E /* Assets.xcassets */; };
 		B02324E320C35C0300DA454E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B02324E120C35C0300DA454E /* LaunchScreen.storyboard */; };
+		B0AB6E8320C6DA7700926D5F /* AllPicturesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AB6E8220C6DA7700926D5F /* AllPicturesCollectionViewController.swift */; };
+		B0AB6E8520C6DAE600926D5F /* PictureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AB6E8420C6DAE600926D5F /* PictureCollectionViewCell.swift */; };
 		B0B0711520C4F2ED005E41DC /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B0711420C4F2ED005E41DC /* DrawingViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		B02324DF20C35C0300DA454E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B02324E220C35C0300DA454E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B02324E420C35C0300DA454E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0AB6E8220C6DA7700926D5F /* AllPicturesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPicturesCollectionViewController.swift; sourceTree = "<group>"; };
+		B0AB6E8420C6DAE600926D5F /* PictureCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCollectionViewCell.swift; sourceTree = "<group>"; };
 		B0B0711420C4F2ED005E41DC /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		D92D22687E19229E234A8FEC /* Pods-Sketchpad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sketchpad.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sketchpad/Pods-Sketchpad.release.xcconfig"; sourceTree = "<group>"; };
 		DC5DB2E6F39C43C459F871C1 /* Pods_Sketchpad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sketchpad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +86,8 @@
 			children = (
 				B02324D520C35C0300DA454E /* AppDelegate.swift */,
 				B0B0711420C4F2ED005E41DC /* DrawingViewController.swift */,
+				B0AB6E8220C6DA7700926D5F /* AllPicturesCollectionViewController.swift */,
+				B0AB6E8420C6DAE600926D5F /* PictureCollectionViewCell.swift */,
 				B02324D920C35C0300DA454E /* Main.storyboard */,
 				B02324DF20C35C0300DA454E /* Assets.xcassets */,
 				B02324E120C35C0300DA454E /* LaunchScreen.storyboard */,
@@ -205,7 +211,9 @@
 			files = (
 				B02324DE20C35C0300DA454E /* Sketchpad.xcdatamodeld in Sources */,
 				B0B0711520C4F2ED005E41DC /* DrawingViewController.swift in Sources */,
+				B0AB6E8520C6DAE600926D5F /* PictureCollectionViewCell.swift in Sources */,
 				B02324D620C35C0300DA454E /* AppDelegate.swift in Sources */,
+				B0AB6E8320C6DA7700926D5F /* AllPicturesCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
