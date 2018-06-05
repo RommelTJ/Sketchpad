@@ -8,20 +8,15 @@
 
 import UIKit
 
-private let reuseIdentifier = "pictureCollectionCell"
-
 class AllPicturesCollectionViewController: UICollectionViewController {
 
     private var pictures: [Picture] = []
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+    override func viewWillAppear(_ animated: Bool) {
+        getPictures()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    func getPictures() {
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             if let pictures = try? context.fetch(Picture.fetchRequest()) as? [Picture] {
                 if let pics = pictures {
@@ -30,10 +25,6 @@ class AllPicturesCollectionViewController: UICollectionViewController {
                 }
             }
         }
-    }
-    
-    func getPictures() {
-        
     }
 
     // MARK: UICollectionViewDataSource
@@ -48,7 +39,7 @@ class AllPicturesCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? PictureCollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "pictureCollectionCell", for: indexPath) as? PictureCollectionViewCell {
             let picture = pictures[indexPath.row]
             cell.pictureLabel.text = picture.name
             if let imageData = picture.image {
