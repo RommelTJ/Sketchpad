@@ -41,6 +41,7 @@ class DrawingViewController: UIViewController, ChromaColorPickerDelegate {
     }
     
     @IBAction func deleteTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func saveTapped(_ sender: Any) {
