@@ -17,6 +17,7 @@ class DrawingViewController: UIViewController, ChromaColorPickerDelegate {
     private var brushSize: Float = 10.0
     private var colorPicker: ChromaColorPicker?
     private var greyedOut = UIView()
+    @IBOutlet weak var controlStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,12 @@ class DrawingViewController: UIViewController, ChromaColorPickerDelegate {
             view.addSubview(picker)
         }
         colorPicker?.isHidden = true
+    }
+    
+    @IBAction func deleteTapped(_ sender: Any) {
+    }
+    
+    @IBAction func saveTapped(_ sender: Any) {
     }
     
     @IBAction func colorTapped(_ sender: Any) {
@@ -62,6 +69,8 @@ class DrawingViewController: UIViewController, ChromaColorPickerDelegate {
     @IBAction func eraseTapped(_ sender: Any) {
         currentColor = UIColor.white.cgColor
     }
+    
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let beginPoint = touches.first?.location(in: drawImageView) {
