@@ -73,6 +73,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="6fY-dF-ozd" kind="show" id="28T-p9-bWI"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYd-8u-v60" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
