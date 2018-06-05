@@ -12,11 +12,28 @@ private let reuseIdentifier = "pictureCollectionCell"
 
 class AllPicturesCollectionViewController: UICollectionViewController {
 
+    private var pictures: [Picture] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            if let pictures = try? context.fetch(Picture.fetchRequest()) as? [Picture] {
+                if let pics = pictures {
+                    self.pictures = pics
+                    collectionView?.reloadData()
+                }
+            }
+        }
+    }
+    
+    func getPictures() {
+        
     }
 
     // MARK: UICollectionViewDataSource
