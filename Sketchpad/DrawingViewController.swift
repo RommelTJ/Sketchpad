@@ -50,7 +50,19 @@ class DrawingViewController: UIViewController, ChromaColorPickerDelegate {
             textField.placeholder = "My Masterpiece"
         }
         let saveAction = UIAlertAction(title: "Save", style: .default) { (action) in
-            // TODO.
+            if let name = alertController.textFields?.first?.text {
+                if name != "" {
+                    if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+                        let picture = Picture(context: context)
+                        picture.name = name
+                        if let image = self.drawImageView.image {
+                            picture.image = UIImageJPEGRepresentation(image, 1.0)
+                            (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+                        }
+                    }
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .destructive) { (action) in
             // TODO.
