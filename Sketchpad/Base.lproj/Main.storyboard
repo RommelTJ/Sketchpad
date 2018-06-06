@@ -104,10 +104,21 @@
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="z8T-xm-2mf">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="trash" id="3EG-yH-6tg"/>
-                            <barButtonItem systemItem="action" id="sga-XL-cr5"/>
+                            <barButtonItem systemItem="trash" id="3EG-yH-6tg">
+                                <connections>
+                                    <action selector="deleteTapped:" destination="6fY-dF-ozd" id="s5K-Af-Eng"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="sga-XL-cr5">
+                                <connections>
+                                    <action selector="shareTapped:" destination="6fY-dF-ozd" id="Uxx-2B-cFO"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="detailImageView" destination="5em-uz-dgw" id="hFa-7P-7rw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ocq-EX-qtx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
