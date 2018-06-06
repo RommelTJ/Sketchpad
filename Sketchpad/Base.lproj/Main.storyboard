@@ -88,7 +88,18 @@
                     <view key="view" contentMode="scaleToFill" id="iAs-bW-PLO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5em-uz-dgw">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="seB-Cz-pRq" firstAttribute="bottom" secondItem="5em-uz-dgw" secondAttribute="bottom" id="0sb-wG-bLO"/>
+                            <constraint firstItem="5em-uz-dgw" firstAttribute="top" secondItem="seB-Cz-pRq" secondAttribute="top" id="4hL-BV-MVs"/>
+                            <constraint firstItem="seB-Cz-pRq" firstAttribute="trailing" secondItem="5em-uz-dgw" secondAttribute="trailing" id="Kc9-RL-pBd"/>
+                            <constraint firstItem="5em-uz-dgw" firstAttribute="leading" secondItem="seB-Cz-pRq" secondAttribute="leading" id="eL5-ho-wRo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="seB-Cz-pRq"/>
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="z8T-xm-2mf">
