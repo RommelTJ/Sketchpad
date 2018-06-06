@@ -84,7 +84,7 @@
         <!--Details-->
         <scene sceneID="0wS-yR-o6Z">
             <objects>
-                <viewController id="6fY-dF-ozd" sceneMemberID="viewController">
+                <viewController id="6fY-dF-ozd" customClass="DetailViewController" customModule="Sketchpad" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iAs-bW-PLO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
