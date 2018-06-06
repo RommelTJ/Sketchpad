@@ -23,6 +23,13 @@ class DetailViewController: UIViewController {
     }
 
     @IBAction func deleteTapped(_ sender: Any) {
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            if let picToBeDeleted = picture {
+                context.delete(picToBeDeleted)
+                (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+                navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     @IBAction func shareTapped(_ sender: Any) {
