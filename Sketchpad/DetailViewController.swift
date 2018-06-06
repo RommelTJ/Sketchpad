@@ -10,8 +10,16 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var detailImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
+    @IBAction func deleteTapped(_ sender: Any) {
+    }
+    
+    @IBAction func shareTapped(_ sender: Any) {
+    }
+    
 }
