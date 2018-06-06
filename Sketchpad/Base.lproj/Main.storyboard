@@ -74,14 +74,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="6fY-dF-ozd" kind="show" id="28T-p9-bWI"/>
+                        <segue destination="6fY-dF-ozd" kind="show" identifier="viewDetailSegue" id="28T-p9-bWI"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYd-8u-v60" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="856.79999999999995" y="-18.440779610194905"/>
         </scene>
-        <!--View Controller-->
+        <!--Details-->
         <scene sceneID="0wS-yR-o6Z">
             <objects>
                 <viewController id="6fY-dF-ozd" sceneMemberID="viewController">
@@ -91,10 +91,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="seB-Cz-pRq"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Details" id="z8T-xm-2mf">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="trash" id="3EG-yH-6tg"/>
+                            <barButtonItem systemItem="action" id="sga-XL-cr5"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ocq-EX-qtx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857" y="714"/>
+            <point key="canvasLocation" x="857" y="830"/>
         </scene>
         <!--Drawing View Controller-->
         <scene sceneID="sYH-rj-yg1">
