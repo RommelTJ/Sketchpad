@@ -16,6 +16,10 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = picture?.name
+        
+        if let imageData = picture?.image {
+            detailImageView.image = UIImage(data: imageData)
+        }
     }
 
     @IBAction func deleteTapped(_ sender: Any) {
