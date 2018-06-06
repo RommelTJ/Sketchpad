@@ -72,7 +72,7 @@ open class ColorModeToggleButton: UIButton {
         layer.addSublayer(hueColorGradientLayer)
         layer.addSublayer(grayColorGradientLayer)
         
-        addTarget(self, action: #selector(toggleState), for: .touchUpInside)
+        addTarget(self, action: #selector(toggleState), for: UIControl.Event.touchUpInside)
     }
     
 //    override open func sendActions(for controlEvents: UIControlEvents) {

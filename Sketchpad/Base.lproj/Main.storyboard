@@ -61,7 +61,7 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ib4-Ya-vjI">
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="collectionReusableViewIdentifier" id="ib4-Ya-vjI">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="10"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </collectionReusableView>

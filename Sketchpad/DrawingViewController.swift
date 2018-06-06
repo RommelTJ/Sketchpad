@@ -56,7 +56,7 @@ class DrawingViewController: UIViewController, ChromaColorPickerDelegate {
                         let picture = Picture(context: context)
                         picture.name = name
                         if let image = self.drawImageView.image {
-                            picture.image = UIImageJPEGRepresentation(image, 1.0)
+                            picture.image = image.jpegData(compressionQuality: 1.0)
                             (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
                         }
                     }

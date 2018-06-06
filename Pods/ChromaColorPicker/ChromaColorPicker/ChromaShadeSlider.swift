@@ -174,12 +174,12 @@ open class ChromaShadeSlider: UIControl {
         self.layoutHandleFrame()
         CATransaction.commit()
         
-        self.sendActions(for: .valueChanged)
+        self.sendActions(for: UIControl.Event.valueChanged)
         return true
     }
     
     override open func endTracking(_ touch: UITouch?, with event: UIEvent?) {
-        self.sendActions(for: .editingDidEnd)
+        self.sendActions(for: UIControl.Event.editingDidEnd)
     }
     
   @objc func doubleTapRecognized(_ recognizer: UITapGestureRecognizer){
@@ -199,7 +199,7 @@ open class ChromaShadeSlider: UIControl {
         handleView.color = primaryColor
         currentValue = 0.0
         
-        self.sendActions(for: .valueChanged)
+        self.sendActions(for: UIControl.Event.valueChanged)
         self.delegate?.shadeSliderChoseColor(self, color: currentColor)
     }
     

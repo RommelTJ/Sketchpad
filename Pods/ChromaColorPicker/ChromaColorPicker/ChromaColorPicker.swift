@@ -93,7 +93,7 @@ open class ChromaColorPicker: UIControl {
         /* Setup Add Button */
         addButton = ChromaAddButton()
         self.layoutAddButton() //layout frame
-        addButton.addTarget(self, action: #selector(ChromaColorPicker.addButtonPressed(_:)), for: .touchUpInside)
+        addButton.addTarget(self, action: #selector(ChromaColorPicker.addButtonPressed(_:)), for: UIControl.Event.touchUpInside)
         
         /* Setup Handle Line */
         handleLine = CAShapeLayer()
@@ -112,13 +112,13 @@ open class ChromaColorPicker: UIControl {
         shadeSlider = ChromaShadeSlider()
         shadeSlider.delegate = self
         self.layoutShadeSlider()
-        shadeSlider.addTarget(self, action: #selector(ChromaColorPicker.sliderEditingDidEnd(_:)), for: .editingDidEnd)
+        shadeSlider.addTarget(self, action: #selector(ChromaColorPicker.sliderEditingDidEnd(_:)), for: UIControl.Event.editingDidEnd)
         
         /* Setup Color Mode Toggle Button */
         colorToggleButton = ColorModeToggleButton()
         self.layoutColorToggleButton() //layout frame
         colorToggleButton.colorState = .hue // Default as starting state is hue
-        colorToggleButton.addTarget(self, action: #selector(togglePickerColorMode), for: .touchUpInside)
+        colorToggleButton.addTarget(self, action: #selector(togglePickerColorMode), for: UIControl.Event.touchUpInside)
         colorToggleButton.isHidden = !supportsShadesOfGray // default to hiding if not supported
         
         /* Add components to view */
@@ -183,10 +183,10 @@ open class ChromaColorPicker: UIControl {
     override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         let touchPoint = touches.first!.location(in: self)
         if handleView.frame.contains(touchPoint) {
-            self.sendActions(for: .touchDown)
+            self.sendActions(for: UIControl.Event.touchDown)
             
             /* Enlarge Animation */
-            UIView.animate(withDuration: 0.15, delay: 0, options: .curveEaseIn, animations: { () -> Void in
+            UIView.animate(withDuration: 0.15, delay: 0, options: UIView.AnimationOptions.curveEaseIn, animations: { () -> Void in
                 self.handleView.transform = CGAffineTransform(scaleX: 1.45, y: 1.45)
                 }, completion: nil)
         }
@@ -201,13 +201,13 @@ open class ChromaColorPicker: UIControl {
   @objc func handleWasMoved(_ recognizer: UIPanGestureRecognizer) {
         switch(recognizer.state){
 
-        case UIGestureRecognizerState.changed:
+        case UIGestureRecognizer.State.changed:
             let touchPosition = recognizer.location(in: self)
             self.moveHandleTowardPoint(touchPosition)
-            self.sendActions(for: .touchDragInside)
+            self.sendActions(for: UIControl.Event.touchDragInside)
             break
         
-        case UIGestureRecognizerState.ended:
+        case UIGestureRecognizer.State.ended:
             /* Shrink Animation */
             self.executeHandleShrinkAnimation()
             break
@@ -218,9 +218,9 @@ open class ChromaColorPicker: UIControl {
     }
     
     private func executeHandleShrinkAnimation(){
-        self.sendActions(for: .touchUpInside)
-        self.sendActions(for: .editingDidEnd)
-        UIView.animate(withDuration: 0.15, delay: 0, options: .curveEaseOut, animations: { () -> Void in
+        self.sendActions(for: UIControl.Event.touchUpInside)
+        self.sendActions(for: UIControl.Event.editingDidEnd)
+        UIView.animate(withDuration: 0.15, delay: 0, options: UIView.AnimationOptions.curveEaseOut, animations: { () -> Void in
             self.handleView.transform = CGAffineTransform(scaleX: 1, y: 1)
             }, completion: nil)
     }
@@ -255,7 +255,7 @@ open class ChromaColorPicker: UIControl {
         //Do a 'bob' animation
         UIView.animate(withDuration: 0.2,
                 delay: 0,
-                options: .curveEaseIn,
+                options: UIView.AnimationOptions.curveEaseIn,
                 animations: { () -> Void in
                     sender.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
                 }, completion: { (done) -> Void in
@@ -268,7 +268,7 @@ open class ChromaColorPicker: UIControl {
     }
     
   @objc func sliderEditingDidEnd(_ sender: ChromaShadeSlider){
-        self.sendActions(for: .editingDidEnd)
+        self.sendActions(for: UIControl.Event.editingDidEnd)
     }
     
     //MARK: - Drawing
@@ -425,7 +425,7 @@ open class ChromaColorPicker: UIControl {
     func updateCurrentColor(_ color: UIColor){
         currentColor = color
         addButton.color = color
-        self.sendActions(for: .valueChanged)
+        self.sendActions(for: UIControl.Event.valueChanged)
     }
     
   @objc open func togglePickerColorMode() {
