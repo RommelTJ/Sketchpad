@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--All Pictures Collection View Controller-->
+        <!--Sketchpad-->
         <scene sceneID="KjB-65-U3s">
             <objects>
                 <collectionViewController id="6oE-cf-UC9" customClass="AllPicturesCollectionViewController" customModule="Sketchpad" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,13 +20,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Nwq-xR-TRJ">
                             <size key="itemSize" width="100" height="120"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="headerReferenceSize" width="0.0" height="10"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pictureCollectionCell" id="Wbq-9F-itE" customClass="PictureCollectionViewCell" customModule="Sketchpad" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                                <rect key="frame" x="0.0" y="10" width="100" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
@@ -61,12 +61,17 @@
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ib4-Ya-vjI">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="10"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="6oE-cf-UC9" id="3Mc-fK-TY9"/>
                             <outlet property="delegate" destination="6oE-cf-UC9" id="01O-b6-6eT"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="RWZ-vb-J7z">
+                    <navigationItem key="navigationItem" title="Sketchpad" id="RWZ-vb-J7z">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="IWu-Dl-aJA"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="eba-Xf-o7Y">
                             <connections>
                                 <segue destination="KoE-us-a6f" kind="presentation" id="biM-3L-DLw"/>
