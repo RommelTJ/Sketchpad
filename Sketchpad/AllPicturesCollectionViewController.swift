@@ -54,5 +54,13 @@ class AllPicturesCollectionViewController: UICollectionViewController {
         let picture = pictures[indexPath.row]
         performSegue(withIdentifier: "viewDetailSegue", sender: picture)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailVC = segue.destination as? DetailViewController {
+            if let picture = sender as? Picture {
+                detailVC.picture = picture
+            }
+        }
+    }
 
 }
