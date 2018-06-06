@@ -15,6 +15,7 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = picture?.name
     }
 
     @IBAction func deleteTapped(_ sender: Any) {
