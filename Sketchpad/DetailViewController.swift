@@ -33,6 +33,10 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func shareTapped(_ sender: Any) {
+        if let image = detailImageView.image {
+            let shareVC = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+            present(shareVC, animated: true, completion: nil)
+        }
     }
     
 }
